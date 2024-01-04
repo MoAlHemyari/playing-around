@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athan Times</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+      }
+      body > * {
+        margin: 0.3rem;
+      }
+      table,
+      table * {
+        border: 1px solid #000;
+        padding: 0.3rem;
+      }
+      table {
+        padding: 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>أوقات الأذان</h1>
 
+    <div id="clock"><span id="afterOrBeforNoon"></span></div>
+    <div id="date">
+      <div class="hijri"></div>
+      <div class="gregorian"></div>
+    </div>
+    <div id="place">
+      <select name="cities" id="cities" title="المدن">
+        <option value="makkah">مكة</option>
+        <option value="riyadh">الرياض</option>
+        <option value="dammam">الدمام</option>
+        <option value="istanbul">إسطنبول</option>
+        <option value="bursa">بورصه</option>
+      </select>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>الفجر</th>
+          <th>الشروق</th>
+          <th>الظهر</th>
+          <th>العصر</th>
+          <th>المغرب</th>
+          <th>العشاء</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="athan-times-columns">
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
